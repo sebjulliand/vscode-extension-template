@@ -28,11 +28,12 @@
     ]
   },
   "scripts": {
-    "clean": "rimraf dist",
-		"build": "npm run clean && webpack --mode development",
-		"watch": "npm run clean && webpack --mode development --watch",
-		"vscode:prepublish": "npm run clean && webpack --mode production --devtool hidden-source-map",
-		"package": "vsce package --pre-release"
+	"clean": "rimraf dist",
+	"nls": "npx @vscode/l10n-dev export --outDir ./l10n ./src",
+	"build": "npm run clean && webpack --mode development",
+	"watch": "npm run clean && webpack --mode development --watch",
+	"vscode:prepublish": "npm run clean && webpack --mode production --devtool hidden-source-map",
+	"package": "vsce package --pre-release"
   },
   "devDependencies": {
     "rimraf": "^5",
