@@ -2,7 +2,8 @@
 
 'use strict';
 
-const path = require('path');
+const path = require('path').resolve(__dirname, 'dist');
+require(`fs`).rmSync('dist', { force: true, recursive: true });
 
 //@ts-check
 /** @typedef {import('webpack').Configuration} WebpackConfig **/
@@ -15,7 +16,7 @@ const extensionConfig = {
   entry: './src/extension.ts', // the entry point of this extension, 📖 -> https://webpack.js.org/configuration/entry-context/
   output: {
     // the bundle is stored in the 'dist' folder (check package.json), 📖 -> https://webpack.js.org/configuration/output/
-    path: path.resolve(__dirname, 'dist'),
+    path,
     filename: 'extension.js',
     libraryTarget: 'commonjs2'
   },
