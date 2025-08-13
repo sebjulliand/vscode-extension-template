@@ -1,11 +1,11 @@
 {
   "name": "vscode-extension-template",
-  "publisher": "?",
+  "publisher": "sebjulliand",
   "displayName": "VSCode Extension Template",
   "description": "This is my template.",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.90.0"
+    "vscode": "^1.93.0"
   },
   "extensionDependencies": [],
   "license": "MIT",
@@ -30,7 +30,7 @@
     "build": "webpack --mode development",
     "watch": "webpack --mode development --watch",
     "vscode:prepublish": "webpack --mode production --devtool hidden-source-map",
-    "package": "vsce package --pre-release"
+    "package": "npx @vscode/vsce package --pre-release"
   },
   "devDependencies": {
     "@types/node": "^20",
