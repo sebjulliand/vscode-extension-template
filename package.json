@@ -35,7 +35,7 @@
     "package": "npx @vscode/vsce package --pre-release"
   },
   "devDependencies": {
-    "@halcyontech/vscode-ibmi-types": "^2.16",
+    "@halcyontech/vscode-ibmi-types": "^2.18.0",
     "@types/node": "^22",
     "@types/vscode": "1.104",
     "@typescript-eslint/eslint-plugin": "6.21.0",
